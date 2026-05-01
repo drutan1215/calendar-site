@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Athlete Training — Book a Session</title>
+  <title>Paradise Sports Performance — Book a Session</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -37,13 +37,28 @@
       font-size: 0.95rem;
     }
 
+    .section-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f97316;
+      margin: 2.5rem 0 1rem;
+    }
+
     .calendars {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       max-width: 1400px;
-      margin: 2.5rem auto;
+      margin: 0 auto 2rem;
       padding: 0 1.5rem;
+    }
+
+    .calendars.single {
+      grid-template-columns: 1fr;
+      max-width: 800px;
     }
 
     @media (max-width: 768px) {
@@ -98,10 +113,24 @@
 <body>
 
   <header>
-    <h1>Athlete <span>Training</span></h1>
-    <p>Select a location below to book your session</p>
+    <h1>Paradise <span>Sports Performance</span></h1>
+    <p>Select a session type and location to book your training</p>
   </header>
 
+  <p class="section-label">Football Skills Training</p>
+  <div class="calendars single">
+    <div class="calendar-card">
+      <div class="calendar-card-header">
+        <span class="location-badge">FB</span>
+        <h2>Football Skills Training</h2>
+      </div>
+      <div class="calendar-card-body">
+        <iframe src="https://tidycal.com/paradise-sports-performance/football-skills-training" title="Book - Football Skills Training"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Athlete Training — Pick Your Location</p>
   <div class="calendars">
     <div class="calendar-card">
       <div class="calendar-card-header">
@@ -109,7 +138,7 @@
         <h2>West Virginia</h2>
       </div>
       <div class="calendar-card-body">
-        <iframe src="https://tidycal.com/devanrutan/athlete-training-wv" title="Book - West Virginia"></iframe>
+        <iframe src="https://tidycal.com/paradise-sports-performance/athlete-training-wv" title="Book - West Virginia"></iframe>
       </div>
     </div>
 
@@ -119,7 +148,7 @@
         <h2>Ohio</h2>
       </div>
       <div class="calendar-card-body">
-        <iframe src="https://tidycal.com/devanrutan/athlete-training-oh" title="Book - Ohio"></iframe>
+        <iframe src="https://tidycal.com/paradise-sports-performance/athlete-training-oh" title="Book - Ohio"></iframe>
       </div>
     </div>
   </div>
