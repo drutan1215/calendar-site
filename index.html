@@ -84,7 +84,14 @@
     }
 
     .calendar-card-body {
-      padding: 1rem;
+      padding: 0;
+    }
+
+    .calendar-card-body iframe {
+      display: block;
+      width: 100%;
+      height: 700px;
+      border: none;
     }
   </style>
 </head>
@@ -102,7 +109,7 @@
         <h2>West Virginia</h2>
       </div>
       <div class="calendar-card-body">
-        <div class="tidycal-embed" data-path="devanrutan/athlete-training-wv"></div>
+        <iframe src="https://tidycal.com/devanrutan/athlete-training-wv" title="Book - West Virginia"></iframe>
       </div>
     </div>
 
@@ -112,12 +119,10 @@
         <h2>Ohio</h2>
       </div>
       <div class="calendar-card-body">
-        <div class="tidycal-embed" data-path="devanrutan/athlete-training-oh"></div>
+        <iframe src="https://tidycal.com/devanrutan/athlete-training-oh" title="Book - Ohio"></iframe>
       </div>
     </div>
   </div>
-
-  <script src="https://tidycal.com/js/embed.js" async></script>
 
 </body>
 </html>
