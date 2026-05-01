@@ -47,7 +47,7 @@
       margin: 2.5rem 0 1rem;
     }
 
-    .calendars {
+    .cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -56,29 +56,25 @@
       padding: 0 1.5rem;
     }
 
-    .calendars.single {
+    .cards.single {
       grid-template-columns: 1fr;
-      max-width: 800px;
+      max-width: 600px;
     }
 
     @media (max-width: 768px) {
-      .calendars { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
     }
 
-    .calendar-card {
+    .card {
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
       border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .calendar-card-header {
-      padding: 1rem 1.5rem;
-      background: #111;
-      border-bottom: 1px solid #2a2a2a;
+      padding: 2rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1.25rem;
+      text-align: center;
     }
 
     .location-badge {
@@ -92,14 +88,28 @@
       border-radius: 4px;
     }
 
-    .calendar-card-header h2 {
-      font-size: 1rem;
+    .card h2 {
+      font-size: 1.1rem;
       font-weight: 600;
       letter-spacing: 0.03em;
     }
 
-    .calendar-card-body {
-      padding: 1rem;
+    .btn {
+      display: inline-block;
+      background: #f97316;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+
+    .btn:hover {
+      background: #ea6a0a;
     }
   </style>
 </head>
@@ -111,42 +121,28 @@
   </header>
 
   <p class="section-label">Football Skills Training</p>
-  <div class="calendars single">
-    <div class="calendar-card">
-      <div class="calendar-card-header">
-        <span class="location-badge">FB</span>
-        <h2>Football Skills Training</h2>
-      </div>
-      <div class="calendar-card-body">
-        <div class="tidycal-embed" data-path="paradise-sports-performance/football-skills-training"></div>
-      </div>
+  <div class="cards single">
+    <div class="card">
+      <span class="location-badge">FB</span>
+      <h2>Football Skills Training</h2>
+      <a class="btn" href="https://tidycal.com/paradise-sports-performance/football-skills-training" target="_blank" rel="noopener">Schedule Your Session</a>
     </div>
   </div>
 
   <p class="section-label">Athlete Training — Pick Your Location</p>
-  <div class="calendars">
-    <div class="calendar-card">
-      <div class="calendar-card-header">
-        <span class="location-badge">WV</span>
-        <h2>West Virginia</h2>
-      </div>
-      <div class="calendar-card-body">
-        <div class="tidycal-embed" data-path="paradise-sports-performance/athlete-training-wv"></div>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <span class="location-badge">WV</span>
+      <h2>West Virginia</h2>
+      <a class="btn" href="https://tidycal.com/paradise-sports-performance/athlete-training-wv" target="_blank" rel="noopener">Schedule Your Session</a>
     </div>
 
-    <div class="calendar-card">
-      <div class="calendar-card-header">
-        <span class="location-badge">OH</span>
-        <h2>Ohio</h2>
-      </div>
-      <div class="calendar-card-body">
-        <div class="tidycal-embed" data-path="paradise-sports-performance/athlete-training-oh"></div>
-      </div>
+    <div class="card">
+      <span class="location-badge">OH</span>
+      <h2>Ohio</h2>
+      <a class="btn" href="https://tidycal.com/paradise-sports-performance/athlete-training-oh" target="_blank" rel="noopener">Schedule Your Session</a>
     </div>
   </div>
-
-  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 
 </body>
 </html>
