@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athlete Training — Book a Session</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    header h1 span {
+      color: #f97316;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    .calendars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .calendars { grid-template-columns: 1fr; }
+    }
+
+    .calendar-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .calendar-card-header {
+      padding: 1rem 1.5rem;
+      background: #111;
+      border-bottom: 1px solid #2a2a2a;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .location-badge {
+      background: #f97316;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .calendar-card-header h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .calendar-card-body {
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Athlete <span>Training</span></h1>
+    <p>Select a location below to book your session</p>
+  </header>
+
+  <div class="calendars">
+    <div class="calendar-card">
+      <div class="calendar-card-header">
+        <span class="location-badge">WV</span>
+        <h2>West Virginia</h2>
+      </div>
+      <div class="calendar-card-body">
+        <div class="tidycal-embed" data-path="devanrutan/athlete-training-wv"></div>
+      </div>
+    </div>
+
+    <div class="calendar-card">
+      <div class="calendar-card-header">
+        <span class="location-badge">OH</span>
+        <h2>Ohio</h2>
+      </div>
+      <div class="calendar-card-body">
+        <div class="tidycal-embed" data-path="devanrutan/athlete-training-oh"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+
+</body>
+</html>
